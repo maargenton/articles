@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Styling Web Component</title>
+    <script type="module" src="./index.js"></script>
+
+    <style>
+        :root {
+            font-size: 16px;
+            font-family: sans-serif;
+            --margin: 1.5em;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--margin);
+            padding: var(--margin);
+        }
+
+        .content {
+            display: flex;
+            gap: var(--margin);
+        }
+
+        .styled {
+            --custom-color: hsl(120, 60%, 20%);
+            --custom-surface: hsl(120, 47%, 68%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div>
+            <my-component-v1>
+                <span>v1<br />default</span>
+            </my-component-v1>
+        </div>
+
+        <div>
+            <my-component-v1 class="styled">
+                <span>v1<br />styled</span>
+            </my-component-v1>
+        </div>
+
+        <div class="styled">
+            <my-component-v1>
+                <span>v1<br />inherited</span>
+            </my-component-v1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div>
+            <my-component-v2>
+                <span>v2<br />default</span>
+            </my-component-v2>
+        </div>
+
+        <div>
+            <my-component-v2 class="styled">
+                <span>v2<br />styled</span>
+            </my-component-v2>
+        </div>
+
+        <div class="styled">
+            <my-component-v2>
+                <span>v2<br />inherited</span>
+            </my-component-v2>
+        </div>
+    </div>
+
+    <div class="content">
+        <div>
+            <my-component-v3>
+                <span>v3<br />default</span>
+            </my-component-v3>
+        </div>
+
+        <div>
+            <my-component-v3 class="styled">
+                <span>v3<br />styled</span>
+            </my-component-v3>
+        </div>
+
+        <div class="styled">
+            <my-component-v3>
+                <span>v3<br />inherited</span>
+            </my-component-v3>
+        </div>
+    </div>
+</body>
+
+</html>
