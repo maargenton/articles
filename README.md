@@ -1,9 +1,12 @@
-# Styling Web component
+# Styling web component
 
 ![splash](images/splash.jpg)
 
 
-Recently, while working on a full web application built as a hierarchy of web components, I found out more about how custom CSS properties are defined and inherited, and discovered a useful trick to apply consistent styling across the entire application.
+Recently, while working on a full web application built as a hierarchy of web
+components, I found out more about how custom CSS properties are defined and
+inherited, and discovered a useful trick to apply consistent styling across the
+entire application.
 
 ## Common approach
 
@@ -56,7 +59,7 @@ everywhere the property is referenced, and they must all be consistent.
 
 ## Threading the needle
 
-An better approach is to define a private version of the custom  property
+A better approach is to define a private version of the custom  property
 at the `:host` level of the component, using the public property value if
 defined and a default value otherwise. The public property can then be redefined
 on the direct descendants of the `:host` using the private variable as a value.
