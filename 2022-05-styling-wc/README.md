@@ -92,4 +92,4 @@ and values.
   throughout the elements hierarchy, and group all common definitions in the
   `:root` selector of the main document.
 
-  Sample code available [here](https://github.com/maargenton/articles/2022-05-styling-wc)
+Sample code available [here](https://github.com/maargenton/articles/tree/master/2022-05-styling-wc)
