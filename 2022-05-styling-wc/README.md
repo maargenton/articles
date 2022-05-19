@@ -21,8 +21,8 @@ values, and use them to style the component.
 }
 ```
 
-Outside of the component, the custom properties can be redefined on the custom
-element to apply the overall document styling.
+Outside of the component, the custom properties can be redefined to apply custom
+styling.
 
 ```css
 my-component {
@@ -69,23 +69,27 @@ on the direct descendants of the `:host` using the private variable as a value.
     --_custom-color: var(--custom-color, hsl(5, 60%, 20%));
     --_custom-surface: var(--custom-surface, hsl(5, 69%, 81%));
 }
-:host>* {
+:host > * {
     --custom-color: var(--_custom-color);
     --custom-surface: var(--_custom-surface);
 }
 ```
 
-Internally, all references can use the public property, and nested components
-will inherit the inherited value if any or the component default value
-otherwise.
+Internally, all variable references can access the public property, which will
+have the intended values (the value defined externally or a consistent default
+value as fallback), and all nested components will also see the same variables
+and values.
 
 ![v3](images/v3.jpg)
 
 ## Benefits
 
-- The web components take custom properties, either explicit or inherited, with
-  a component defined default value if not specified externally.
-- All the custom properties of a web component, and their default values, are
-  neatly defined in a single place, in the `:host` of the component.
-- Application level styling properties can be grouped in the `:root` of the
-  main document CSS.
+- Components internals can access custom properties knowing that those
+  properties will be properly defined with a reasonable default.
+- All custom properties of a component and their default values are defined
+  once, all grouped together under the `:host` selector of the component.
+- Application level styling can take advantage of properties inheritance
+  throughout the elements hierarchy, and group all common definitions in the
+  `:root` selector of the main document.
+
+  Sample code available [here](https://github.com/maargenton/articles/2022-05-styling-wc)
