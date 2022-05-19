@@ -102,7 +102,7 @@ and values.
 ## Benefits
 
 - Components internals can access custom properties knowing that those
-  properties will be properly defined with a reasonable default.
+  properties will be properly defined with a reasonable default value.
 - All custom properties of a component and their default values are defined
   once, all grouped together under the `:host` selector of the component.
 - Application level styling can take advantage of properties inheritance
