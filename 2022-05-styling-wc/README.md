@@ -1,4 +1,21 @@
-# Styling web component
+---
+title: "Styling web components"
+description: "Leveraging custom CSS properties inheritance in web components"
+date: 2022-05-19T09:07:00Z
+author: "Marc-Antoine Argenton"
+feature_image: images/splash.jpg
+tags:
+  - Web Components
+  - CSS
+  - Custom Properties
+  - Css Custom Properties
+  - Css Variables
+---
+
+
+# Styling web components
+
+_Leveraging custom CSS properties inheritance in web components_
 
 ![splash](images/splash.jpg)
 
@@ -92,4 +109,4 @@ and values.
   throughout the elements hierarchy, and group all common definitions in the
   `:root` selector of the main document.
 
-Sample code available [here](https://github.com/maargenton/articles/tree/master/2022-05-styling-wc)
+Original article and sample code available [here](https://github.com/maargenton/articles/tree/master/2022-05-styling-wc)
